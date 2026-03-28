@@ -820,6 +820,16 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
+@keyframes float-up {
+  0% { transform: translateY(0) scale(1); opacity: 0; }
+  8% { opacity: 0.6; }
+  92% { opacity: 0.6; }
+  100% { transform: translateY(-100vh) scale(0.3); opacity: 0; }
+}
+.hero-particles { position:absolute; inset:0; overflow:hidden; pointer-events:none; z-index:0; }
+.hero-particle { position:absolute; bottom:-10px; width:4px; height:4px; border-radius:50%; background:#4D7EFF; opacity:0; animation:float-up linear infinite; }
+#hero { position:relative; }
+#hero .hero-grid { position:relative; z-index:1; }
   </style>
 </head>
 <body>
@@ -857,6 +867,7 @@
 
 <!-- ─── HERO ─── -->
 <section id="hero" class="container">
+<div class="hero-particles" id="hero-particles"></div>
   <div class="hero-grid">
     <div class="hero-left reveal">
       <span class="hero-label">Что внутри?</span>
