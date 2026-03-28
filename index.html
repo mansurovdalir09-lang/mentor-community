@@ -41,9 +41,9 @@
       font-weight: 800;
       letter-spacing: -0.025em;
       line-height: 1.1;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
-    .section-subtitle { color: var(--gray); font-size: 15px; margin-bottom: 40px; }
+    .section-subtitle { color: var(--gray); font-size: 15px; margin-bottom: 40px; line-height: 1.8; }
     .card {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -340,7 +340,7 @@
     .benefits-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+      gap: 24px;
     }
     .benefit-card {
       background: var(--bg-card);
@@ -352,10 +352,10 @@
     .benefit-card:hover { border-color: var(--blue); transform: translateY(-3px); }
     .benefit-icon {
       font-size: 36px;
-      margin-bottom: 14px;
+      margin-bottom: 20px;
       display: block;
     }
-    .benefit-card h3 { font-size: 15px; font-weight: 600; color: var(--white); }
+    .benefit-card h3 { font-size: 15px; font-weight: 600; color: var(--white); margin-top: 4px; }
 
     /* ─── ACCORDION (content) ─── */
     #content .content-intro {
@@ -390,6 +390,15 @@
       transition: background 0.2s;
     }
     .accordion-header:hover { background: rgba(255,255,255,0.03); }
+    .accordion-header {
+      padding: 20px 0;
+      line-height: 1.4;
+    }
+    .accordion-header span:first-child {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
     .accordion-arrow {
       width: 24px; height: 24px;
       display: flex; align-items: center; justify-content: center;
