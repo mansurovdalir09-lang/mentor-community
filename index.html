@@ -45,11 +45,13 @@
     }
     .section-subtitle { color: var(--gray); font-size: 15px; margin-bottom: 40px; line-height: 1.8; }
     .card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.08);
       border-radius: 16px;
       padding: 24px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease, border-color 0.3s ease;
     }
     .card:hover {
       transform: translateY(-4px);
@@ -220,11 +222,13 @@
     }
     .hero-buttons { display: flex; flex-direction: column; gap: 12px; max-width: 360px; }
     .hero-card {
-      background: radial-gradient(ellipse at 55% 35%, #1e2a4a 0%, #131b30 55%, #0d1220 100%);
-      border: 1px solid rgba(77,126,255,0.25);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      box-shadow: 0 40px 100px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
       border-radius: 28px;
       padding: 36px;
-      box-shadow: 0 32px 80px rgba(77,126,255,0.15), 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08);
       position: relative;
       overflow: hidden;
     }
