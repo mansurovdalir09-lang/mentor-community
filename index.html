@@ -1878,25 +1878,21 @@
     });
   }, { threshold: 0.3 });
   sections.forEach(s => sectionObserver.observe(s));
-</script>
-<script>
+
+  // ── Hero floating particles
   (function() {
     const container = document.getElementById('hero-particles');
     if (!container) return;
-    const count = 28;
-    for (let i = 0; i < count; i++) {
+    for (let i = 0; i < 20; i++) {
       const p = document.createElement('div');
       p.className = 'hero-particle';
-      const size = 2 + Math.random() * 4;
-      p.style.cssText = [
-        'left:' + (Math.random() * 100) + '%',
-        'width:' + size + 'px',
-        'height:' + size + 'px',
-        'animation-duration:' + (6 + Math.random() * 10) + 's',
-        'animation-delay:' + (Math.random() * 12) + 's',
-        'opacity:0',
-        'background:' + (Math.random() > 0.5 ? '#4D7EFF' : '#6B9AFF')
-      ].join(';');
+      p.style.left = (Math.random() * 100) + '%';
+      const size = (Math.random() * 3 + 2) + 'px';
+      p.style.width = size;
+      p.style.height = size;
+      p.style.animationDuration = (Math.random() * 14 + 8) + 's';
+      p.style.animationDelay = (Math.random() * 12) + 's';
+      p.style.background = Math.random() > 0.5 ? '#4D7EFF' : '#6B9AFF';
       container.appendChild(p);
     }
   })();
