@@ -82,7 +82,9 @@
     }
     .btn:hover { opacity: 0.88; transform: translateY(-1px); }
     .btn-primary {
-      background: linear-gradient(135deg, #4D7EFF 0%, #2563eb 100%);
+      background: linear-gradient(135deg, #3b6fd4 0%, #4D7EFF 50%, #60a5fa 100%);
+      background-size: 200% 200%;
+      animation: gradientShift 3s ease infinite;
       color: #fff;
       border-radius: 100px;
       padding: 16px 36px;
@@ -808,6 +810,11 @@
       .benefits-grid { grid-template-columns: 1fr; }
       .hero-title { font-size: 30px; }
       .section-title { font-size: 22px; }
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
   </style>
 </head>
