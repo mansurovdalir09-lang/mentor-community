@@ -937,27 +937,20 @@
           При этом я стремлюсь к тому, чтобы каждый участник сообщества со временем становился <strong>ментором для других</strong>, делясь своим <strong>опытом и знаниями</strong>.
         </div>
       </div>
-        <div id="yt-facade" onclick="playYT()" style="display:block;position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:20px;margin-top:40px;border:1px solid rgba(255,255,255,0.08);box-shadow:0 20px 60px rgba(0,0,0,0.4);cursor:pointer;background:#000">
-          <img src="https://img.youtube.com/vi/VTiFP5eH7Nw/maxresdefault.jpg" alt="Mentor Community" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:20px;opacity:0.85">
-          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px">
-            <div style="width:72px;height:72px;background:rgba(255,0,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(0,0,0,0.5)">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <div style="color:#fff;font-size:13px;font-weight:600;letter-spacing:0.05em;text-shadow:0 1px 4px rgba(0,0,0,0.8)">Нажмите для просмотра</div>
-          </div>
-        </div>
-        <script>
-          function playYT() {
-            var el = document.getElementById('yt-facade');
-            var iframe = document.createElement('iframe');
-            iframe.src = 'https://www.youtube.com/embed/VTiFP5eH7Nw?autoplay=1&rel=0&modestbranding=1';
-            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-            iframe.allowFullscreen = true;
-            iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:20px';
-            el.innerHTML = '';
-            el.appendChild(iframe);
-          }
-        </script>
+        <div style="position:relative;margin-top:40px;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);box-shadow:0 20px 60px rgba(0,0,0,0.5);background:#0a0f1e;aspect-ratio:16/9;cursor:pointer" id="yt-player" onclick="
+  const d=this;
+  d.innerHTML='<iframe src=\'https://www.youtube.com/embed/VTiFP5eH7Nw?autoplay=1&rel=0\' style=\'position:absolute;top:0;left:0;width:100%;height:100%;border:0\' allow=\'autoplay;encrypted-media;picture-in-picture\' allowfullscreen></iframe>';
+  d.style.aspectRatio='16/9';
+  d.style.position='relative';
+">
+  <img src="https://img.youtube.com/vi/VTiFP5eH7Nw/hqdefault.jpg" alt="Mentor Community" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.display='none'">
+  <div style="position:absolute;inset:0;background:rgba(0,0,0,0.4);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px">
+    <div style="width:72px;height:72px;background:rgba(77,126,255,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(77,126,255,0.5)">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+    </div>
+    <div style="color:#fff;font-size:15px;font-weight:600">Нажмите для просмотра</div>
+  </div>
+</div>
     </div>
   </div>
 </section>
